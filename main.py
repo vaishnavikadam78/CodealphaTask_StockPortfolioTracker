@@ -16,7 +16,7 @@ def stock_portfolio_tracker():
 
     portfolio = {}  # to store user inputs
 
-    # user input loop
+    
     while True:
         stock = input("Enter stock symbol (or 'done' to finish): ").upper().strip()
 
@@ -37,7 +37,7 @@ def stock_portfolio_tracker():
         except ValueError:
             print("⚠ Please enter a valid number for quantity.")
 
-    # calculate total investment
+    
     total_value = 0
     print("\n📌 Your Portfolio Summary:")
     print("-" * 40)
@@ -49,7 +49,7 @@ def stock_portfolio_tracker():
     print("-" * 40)
     print(f"💰 Total Investment Value: ${total_value}")
 
-    # ask user if they want to save result
+    
     save_choice = input("\nDo you want to save portfolio to file? (yes/no): ").lower()
     if save_choice == "yes":
         filename = f"portfolio_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
@@ -65,3 +65,4 @@ def stock_portfolio_tracker():
 # run program
 if __name__ == "__main__":
     stock_portfolio_tracker()
+
